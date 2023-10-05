@@ -41,6 +41,7 @@ console.log(stack.pop());
 console.log(stack.pop());
 stack.peek();
 
+//extra - inheritance
 class ResetableStack extends Stack {
   reset() {
     this.setItems([]);

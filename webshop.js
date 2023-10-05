@@ -69,11 +69,7 @@ class Webshop {
   }
 
   getTotalPrice() {
-    let totalPrice = 0;
-    for (const product of this.#products) {
-      totalPrice += product.price;
-    }
-    return totalPrice;
+    return this.#products.reduce((acc, product) => acc + product.price, 0);
   }
 
   getProductsByType(type) {

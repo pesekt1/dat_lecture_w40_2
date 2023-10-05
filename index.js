@@ -127,3 +127,38 @@ class CircleHashTag {
 
 const cHashTag = new CircleHashTag(1);
 console.log(cHashTag);
+
+//classical inheritance
+class Shape {
+  constructor(color) {
+    this.color = color;
+  }
+  drag() {
+    console.log("drag shape");
+  }
+
+  render() {
+    console.log("render shape");
+  }
+}
+
+class CircleShape extends Shape {
+  constructor(color, radius) {
+    super(color);
+    this.radius = radius;
+  }
+  drag() {
+    super.drag();
+    console.log("drag circle");
+  }
+
+  render() {
+    console.log("render circle");
+  }
+}
+
+const circleShape = new CircleShape("red", 1);
+
+console.log(circleShape);
+circleShape.render();
+circleShape.drag();
